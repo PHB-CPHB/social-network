@@ -3,7 +3,9 @@
 ## Requirements
 
 Maven
+
 Java
+
 Docker
 
 ## Setup
