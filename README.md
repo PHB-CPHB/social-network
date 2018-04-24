@@ -29,6 +29,7 @@ sed -i -E '1s/.*/:START_ID,:END_ID/' social_network_edges.csv
 
 After that you can create your neo4j container in docker and import the data with the following command
 ```
+// Step 1
 docker run \
     -d --name neo4j \
     --rm \
@@ -40,19 +41,24 @@ docker run \
     --env=NEO4J_dbms_security_procedures_unrestricted=apoc.\\\*,algo.\\\* \
     --env=NEO4J_dbms_memory_pagecache_size=6G \
     --env=NEO4J_dbms_memory_heap_max__size=10G \
-    neo4j
-```
-```
+    neo4j
+
+// Step 2
 docker exec neo4j sh -c 'neo4j stop'
-docker exec neo4j sh -c 'rm -rf data/databases/graph.db'
-```
-```
+
+// Step 3
+docker exec neo4j sh -c 'rm -rf data/databases/graph.db''
+
+// Step 4
 docker exec neo4j sh -c 'neo4j-admin import \
     --nodes:Person /import/social_network_nodes.csv \
     --relationships:ENDORSES /import/social_network_edges.csv \
     --ignore-missing-nodes=true \
     --ignore-duplicate-nodes=true \
     --id-type=INTEGER'
+
+// Step 5
+docker restart neo4j
 ```
 
 ### Postgres
