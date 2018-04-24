@@ -68,8 +68,8 @@ To run the code, open the project in an IDEA and navagiate to the Main class and
 ## Results
 | Depth | Postgres Median | Postgres Average  | Neo4j Median | Neo4j Average |
 | ----- |:---------------:| :----------------:|:------------:|:-------------:|
-|   1   |                 |                   |              |               |
-|   2   |                 |                   |              |               |
-|   3   |                 |                   |              |               |
-|   4   |                 |                   |              |               |
+|   1   |      0.959      |       1.094       |    0.373     |     0.417     |
+|   2   |      3.167      |       2.411       |    0.469     |     0.418     |
+|   3   |      3.510      |       3.499       |    1.076     |     0.668     |
+|   4   |      4.775      |       5.883       |    0.649     |     0.424     |
 |   5   |                 |                   |              |               |
