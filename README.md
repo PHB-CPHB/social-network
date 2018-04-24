@@ -12,7 +12,7 @@ The following Docker commands are used to fill your database with data
 
 First you need to get the files which can be done with following commands
 
-The file can be found [here] (https://github.com/datsoftlyngby/soft2018spring-databases-teaching-material/blob/master/data/archive_graph.tar.gz)
+The file can be found [here](https://github.com/datsoftlyngby/soft2018spring-databases-teaching-material/blob/master/data/archive_graph.tar.gz)
 
 After that you need to unpack it and change some headers. That can be done with the follwing commands
 ```
