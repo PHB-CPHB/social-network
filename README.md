@@ -4,12 +4,17 @@
 
 Maven
 
-Java
+Java 8
 
 Docker
 
+Postgres on port 5432 with the role 'appdev'. (Important to import data follow setup)
+
+Neo4j on port 7474. (Important to import data follow setup)
+
 ## Setup
 
+### Neo4j
 The following Docker commands are used to fill your database with data
 
 First you need to get the files which can be done with following commands
@@ -50,6 +55,21 @@ docker exec neo4j sh -c 'neo4j-admin import \
     --id-type=INTEGER'
 ```
 
+### Postgres
+
+```
+docker run -p 5432:5432 --name data jegp/soft2018-data
+```
+
 ## Running the Example
 
 To run the code, open the project in an IDEA and navagiate to the Main class and execute the code
+
+## Results
+| Depth | Postgres Median | Postgres Average  | Neo4j Median | Neo4j Average |
+| ----- |:---------------:| :----------------:|:------------:|:-------------:|
+|   1   |                 |                   |              |               |
+|   2   |                 |                   |              |               |
+|   3   |                 |                   |              |               |
+|   4   |                 |                   |              |               |
+|   5   |                 |                   |              |               |
